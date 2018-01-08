@@ -1,0 +1,33 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+.card {
+    border: 1px solid grey;
+    background-color: cadetblue;
+    color:white;
+    margin-bottom:15px;
+  }
+  
+  .buttons {
+    white-space:nowrap; 
+
+    }
+    .buttons>li{
+        float:left;
+        margin:0 2px 2px 2px;
+        padding:0 2px 2px 2px;
+    }
+  
+  .list-group-item{
+    line-height:60px;
+  }
+  
+  

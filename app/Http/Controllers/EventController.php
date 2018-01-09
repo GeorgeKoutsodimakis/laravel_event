@@ -9,10 +9,10 @@ use App\Category;
 class EventController extends Controller
 {
     //
-
     public function index(Event $event,Request $request){
+        $event = Event::with(array('category'))->get();
 
-        $event = $request->all();
+         $event = $request->all();
         return view('events.index',compact('event'));
     }
 
@@ -21,6 +21,7 @@ class EventController extends Controller
         ->pluck('title','id');
 
         $eventCategory = [];
+        $category = Category::with(array('title'))->get();
 
         return view('events.create', [
             'category' => $category,

@@ -19,7 +19,7 @@ class CategoryController extends Controller
     }
 
     public function create(){
-        return view('categories.index');
+        return view('categories.create');
     }
 
     public function store(Request $request){
@@ -32,7 +32,7 @@ class CategoryController extends Controller
             'title' => request('title')
         ]);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('category.index');
     }
 
     public function destroy(Category $category){

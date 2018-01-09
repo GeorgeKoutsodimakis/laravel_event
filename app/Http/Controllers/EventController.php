@@ -24,7 +24,7 @@ class EventController extends Controller
 
         return view('events.create', [
             'category' => $category,
-           
+            'eventCategory'=>$eventCategory
         ]);
     }
 

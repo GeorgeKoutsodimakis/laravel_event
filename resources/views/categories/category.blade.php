@@ -3,14 +3,16 @@
     @foreach($category as $category)
 
      <li class="list-group-item">
-     {{$category->title}}
+         <div class="row">
+            <div class="col-sm-10"><h3>{{$category->title}}</h3></div>
 
-     
+            <div class="col-sm-2">
+                {!! Form::open(['route' => ['category.destroy',$category],'method'=>'delete']) !!}
+                 <button type="submit" class="btn btn-danger">Delete</button>
+                {!! Form::close() !!}
+            </div>
 
-        {{!! Form::open(['route'=>['category.destroy','$category'],'method'=>'delete'],['class'=>'pull-right']) !!}}
-        <button type="submit" class="btn btn-danger">Delete</button>
-
-         {{!! Form::close() !!}}
+         </div> 
 
      </li>
 
@@ -18,5 +20,4 @@
 
 </ul>
 
-@include('layouts.errors')
 
